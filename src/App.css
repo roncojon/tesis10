@@ -6,6 +6,8 @@
   height: 40vmin;
   pointer-events: none;
 }
+.ar {/* background-image: red; */ background-color: red; width: 5px;}
+.ar:hover {cursor:pointer; }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
