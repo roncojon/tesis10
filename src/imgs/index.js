@@ -63,57 +63,6 @@ export const imagenes = [ a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13
     a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40,
     a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59, a60 ];
 
-export const imgs = [
-    {
-        img: a1
-        , correctAnswer: 3
-    },
-    {
-        img: a2
-        , correctAnswer: 2
-    },
-    {
-        img: a3
-        , correctAnswer: 2
-    },
-    {
-        img: a4
-        , correctAnswer: 2
-    },
-    {
-        img: a5
-        , correctAnswer: 3
-    },
-    {
-        img: a6
-        , correctAnswer: 3
-    },
-    {
-        img: a7
-        , correctAnswer: 2
-    },
-    {
-        img: a8
-        , correctAnswer: 3
-    },
-    {
-        img: a9
-        , correctAnswer: 1
-    },
-    {
-        img: a10
-        , correctAnswer: 1
-    },
-    {
-        img: a11
-        , correctAnswer: 1
-    },
-    {
-        img: a12
-        , correctAnswer: 3
-    },
-]
-
 export const respuestas = [ 3, 2, 2, 2,
     3, 3, 2, 3,
     1, 1, 1, 3,
@@ -130,3 +79,63 @@ export const respuestas = [ 3, 2, 2, 2,
     2, 3, 2, 3,
     3, 1, 2, 1, ];
 
+    export default [{imagen:a1,respuestaCorrecta: 3},
+        {imagen:a2,respuestaCorrecta:2},
+        {imagen:a3,respuestaCorrecta:2},
+        {imagen:a4,respuestaCorrecta:2},
+        {imagen:a5,respuestaCorrecta:3},
+        {imagen:a6,respuestaCorrecta:3},
+        {imagen:a7,respuestaCorrecta:2},
+        {imagen:a8,respuestaCorrecta:3},
+        {imagen:a9,respuestaCorrecta:1},
+        {imagen:a10,respuestaCorrecta:1},
+        {imagen:a11,respuestaCorrecta:1},
+        {imagen:a12,respuestaCorrecta:3},
+        {imagen:a13,respuestaCorrecta:2},
+        {imagen:a14,respuestaCorrecta:1},
+        {imagen:a15,respuestaCorrecta:2},
+        {imagen:a16,respuestaCorrecta:2},
+        {imagen:a17,respuestaCorrecta:2},
+        {imagen:a18,respuestaCorrecta:2},
+        {imagen:a19,respuestaCorrecta:3},
+        {imagen:a20,respuestaCorrecta:1},
+        {imagen:a21,respuestaCorrecta:2},
+        {imagen:a22,respuestaCorrecta:2},
+        {imagen:a23,respuestaCorrecta:1},
+        {imagen:a24,respuestaCorrecta:1},
+        {imagen:a25,respuestaCorrecta:1},
+        {imagen:a26,respuestaCorrecta:1},
+        {imagen:a27,respuestaCorrecta:1},
+        {imagen:a28,respuestaCorrecta:3},
+        {imagen:a29,respuestaCorrecta:1},
+        {imagen:a30,respuestaCorrecta:3},
+        {imagen:a31,respuestaCorrecta:2},
+        {imagen:a32,respuestaCorrecta:2},
+        {imagen:a33,respuestaCorrecta:1},
+        {imagen:a34,respuestaCorrecta:1},
+        {imagen:a35,respuestaCorrecta:3},
+        {imagen:a36,respuestaCorrecta:3},
+        {imagen:a37,respuestaCorrecta:1},
+        {imagen:a38,respuestaCorrecta:1},
+        {imagen:a39,respuestaCorrecta:2},
+        {imagen:a40,respuestaCorrecta:3},
+        {imagen:a41,respuestaCorrecta:2},
+        {imagen:a42,respuestaCorrecta:2},
+        {imagen:a43,respuestaCorrecta:3},
+        {imagen:a44,respuestaCorrecta:3},
+        {imagen:a45,respuestaCorrecta:3},
+        {imagen:a46,respuestaCorrecta:2},
+        {imagen:a47,respuestaCorrecta:2},
+        {imagen:a48,respuestaCorrecta:1},
+        {imagen:a49,respuestaCorrecta:1},
+        {imagen:a50,respuestaCorrecta:1},
+        {imagen:a51,respuestaCorrecta:1},
+        {imagen:a52,respuestaCorrecta:2},
+        {imagen:a53,respuestaCorrecta:2},
+        {imagen:a54,respuestaCorrecta:3},
+        {imagen:a55,respuestaCorrecta:2},
+        {imagen:a56,respuestaCorrecta:3},
+        {imagen:a57,respuestaCorrecta:3},
+        {imagen:a58,respuestaCorrecta:1},
+        {imagen:a59,respuestaCorrecta:2},
+        {imagen:a60,respuestaCorrecta:1},];
