@@ -1,0 +1,9 @@
+.pCaritas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: yellow;
+    width: 1008px;
+    border: 1px solid black;
+    justify-content: center;
+}

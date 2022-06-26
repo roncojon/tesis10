@@ -13,7 +13,7 @@ export function PruebaCaritasProvider({ children }) {
             anotaciones:'',
             errores:'',
             omisiones:''        }
-    }} />);
+    }}>{children}</PruebaCaritasContext.Provider>);
 }
 
 export default PruebaCaritasContext;

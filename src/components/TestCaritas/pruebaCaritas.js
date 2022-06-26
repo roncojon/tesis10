@@ -1,12 +1,13 @@
 import React from 'react'
-import { imgs } from '../../imgs';
-import Modulo from './modulo';
+import  imgs  from '../../imgs';
+import Modulo from './Modulo'
+import './PruebaCaritas.css'
 
 function PruebaCaritas() {
   return (
-    <div>
-      {imgs.map((img, index) => {
-        return <Modulo key={index} imagen={img.img} respuestaCorrecta={img.correctAnswer} />
+    <div className='pCaritas'>
+      {imgs.map((img) => {
+        return <Modulo key={img.imagen} imagen={img.imagen} respuestaCorrecta={img.respuestaCorrecta} />
       })}
     </div>
   )
