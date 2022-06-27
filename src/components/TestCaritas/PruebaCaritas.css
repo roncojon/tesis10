@@ -1,9 +1,17 @@
 .pCaritas {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     background-color: yellow;
-    width: 1008px;
+    width: 808px;
     border: 1px solid black;
     justify-content: center;
+    
 }
+/* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
+@media all and (max-width: 827px){
+    .pCaritas{ width: 608px;}
+}
+
+/* @media all and (min-width: 1608px){
+    .pCaritas{width: 1608px;}
+} */

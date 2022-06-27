@@ -1,3 +1,20 @@
 .modulo {border: 1px solid black;
-    width:"250px"; height:"80px";
+    width:200px; height:64px;
 }
+.image {width:200px; height:64px;}
+/* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
+
+ @media all and (max-width: 827px){
+    .modulo{ width: 150px;height:48px;}
+        .image {width:150px; height:48px;}
+}
+/*
+@media all and (max-width: 1008px){
+    .modulo{ width: 125px;height:40px;}
+        .image {width:125px; height:40px;}
+} */
+
+/* @media all and (min-width: 1608px){
+    .modulo{ width: 400px;height:128px;}
+        .image {width:400px; height:128px;}
+} */

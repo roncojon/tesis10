@@ -21,7 +21,7 @@ function Modulo({ imagen, respuestaCorrecta }) {
   return (
 
     <div className="modulo">
-      <img src={imagen} alt="Workplace" useMap={`#${imagen}`} />
+      <img className="image" src={imagen} alt="Workplace" useMap={`#${imagen}`} />
       <map name={imagen}>
         <area className='ar' id={imagen + '1'} shape="rect" coords="0,0,82,80" alt="Computer" onClick={evaluacionHandler} />
         <area className='ar' id={imagen + '2'} shape="rect" coords="84,0,166,80" alt="Phone" onClick={evaluacionHandler} />
