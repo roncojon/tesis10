@@ -8,9 +8,9 @@
     
 }
 /* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
-@media all and (max-width: 827px){
+/* @media all and (max-width: 827px){
     .pCaritas{ width: 608px;}
-}
+} */
 
 /* @media all and (min-width: 1608px){
     .pCaritas{width: 1608px;}

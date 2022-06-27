@@ -4,10 +4,10 @@
 .image {width:200px; height:64px;}
 /* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
 
- @media all and (max-width: 827px){
+/*  @media all and (max-width: 827px){
     .modulo{ width: 150px;height:48px;}
         .image {width:150px; height:48px;}
-}
+} */
 /*
 @media all and (max-width: 1008px){
     .modulo{ width: 125px;height:40px;}

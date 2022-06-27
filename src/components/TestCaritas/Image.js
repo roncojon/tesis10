@@ -1,5 +1,5 @@
 import React from 'react'
-import './Modulo.css'
+import './Image.css'
 
 function Modulo({ imagen, respuestaCorrecta }) {
   const evaluacionHandler = (event) => {
@@ -23,9 +23,9 @@ function Modulo({ imagen, respuestaCorrecta }) {
     <div className="modulo">
       <img className="image" src={imagen} alt="Workplace" useMap={`#${imagen}`} />
       <map name={imagen}>
-        <area className='ar' id={imagen + '1'} shape="rect" coords="0,0,82,80" alt="Computer" onClick={evaluacionHandler} />
-        <area className='ar' id={imagen + '2'} shape="rect" coords="84,0,166,80" alt="Phone" onClick={evaluacionHandler} />
-        <area className='ar' id={imagen + '3'} shape="rect" coords="169,0,250,80" alt="Coffee" onClick={evaluacionHandler} />
+        <area className='ar' id={imagen + '1'} shape="rect" coords="0,0,66,80" alt="Computer" onClick={evaluacionHandler} />
+        <area className='ar' id={imagen + '2'} shape="rect" coords="68,0,132,80" alt="Phone" onClick={evaluacionHandler} />
+        <area className='ar' id={imagen + '3'} shape="rect" coords="134,0,200,80" alt="Coffee" onClick={evaluacionHandler} />
       </map>
     </div>
   )
