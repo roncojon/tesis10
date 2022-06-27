@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from './Image'
 import './FilaDe4Imagenes.css'
 
-const FilaDe4Imagenes = ({imagenes}) => {
+const FilaDe4Imagenes = ({ imagenes }) => {
+  const [respCorrectasCounter, setRespCorrectasCounter] = useState(0);
+  const [respIncorrectasCounter, setRespIncorrectasCounter] = useState(0);
+  const [omisionesCounter, setOMisionesCounter] = useState(0);
+  const [imgCounter, setImgCounter] = useState(0);
+
+  const counterCorrectasHandler = () =>{};
+  const counterIncorrectasHandler = () =>{};
+  const counterOmisionesHandler = () =>{};
+
+  const ImagePopulate = imagenes.map((img) => {
+    return <Image key={img.imagen} imagen={img.imagen} respuestaCorrecta={img.respuestaCorrecta} />
+  });
 
   return (
     <div className='fila'>
-    {imagenes.map((img) => {
-      return <Image key={img.imagen} imagen={img.imagen} respuestaCorrecta={img.respuestaCorrecta} />
-    })}
-  </div>
+      {ImagePopulate}
+    </div>
   )
 }
 
