@@ -2,6 +2,7 @@
     width:200px; height:64px;
 }
 .image {width:200px; height:64px;}
+
 /* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
 
 /*  @media all and (max-width: 827px){

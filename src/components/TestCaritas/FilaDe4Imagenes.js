@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from './Image'
+import './FilaDe4Imagenes.css'
 
-const FilaDe4Imagenes = ({props}) => {
+const FilaDe4Imagenes = ({imagenes}) => {
+
   return (
     <div className='fila'>
-    {imgs.map((img) => {
+    {imagenes.map((img) => {
       return <Image key={img.imagen} imagen={img.imagen} respuestaCorrecta={img.respuestaCorrecta} />
     })}
   </div>
