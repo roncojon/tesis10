@@ -1,7 +1,7 @@
 import React from 'react'
 import './Image.css'
 
-function Modulo({ imagen, respuestaCorrecta }) {
+function Modulo({ imagen, respuestaCorrecta,onAddRespCorrecta }) {
   const evaluacionHandler = (event) => {
     event.preventDefault();
     console.log({
@@ -12,6 +12,7 @@ function Modulo({ imagen, respuestaCorrecta }) {
     });
     if (`${imagen}${respuestaCorrecta}` === event.target.id) {
       console.log("Respuesta CORRECTA");
+      onAddRespCorrecta();
     }
     else {
       console.log("Respuesta Erronea");

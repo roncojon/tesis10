@@ -8,12 +8,12 @@ const FilaDe4Imagenes = ({ imagenes }) => {
   const [omisionesCounter, setOMisionesCounter] = useState(0);
   const [imgCounter, setImgCounter] = useState(0);
 
-  const counterCorrectasHandler = () =>{};
-  const counterIncorrectasHandler = () =>{};
-  const counterOmisionesHandler = () =>{};
+  const counterCorrectasHandler = () => {setRespCorrectasCounter((prevState)=>{return prevState+1})};
+  const counterIncorrectasHandler = () => { };
+  const counterOmisionesHandler = () => { };
 
   const ImagePopulate = imagenes.map((img) => {
-    return <Image key={img.imagen} imagen={img.imagen} respuestaCorrecta={img.respuestaCorrecta} />
+    return <Image key={img.imagen} imagen={img.imagen} respuestaCorrecta={img.respuestaCorrecta} onAddRespCorrecta={counterCorrectasHandler}/>
   });
 
   return (
