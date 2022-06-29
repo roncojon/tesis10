@@ -8,8 +8,16 @@ const FilaDe4Imagenes = ({ imagenes: imagenesPlusIndex }) => {
   const [omisionesCounter, setOMisionesCounter] = useState(0);
   const [imgCounter, setImgCounter] = useState(0);
 
-  const counterCorrectasHandler = () => { setRespCorrectasCounter((prevState) => { return prevState + 1 }) };
-  const counterIncorrectasHandler = () => { };
+  const counterCorrectasHandler = (respuesta) => {
+    if (respuesta) {
+      setRespCorrectasCounter((prevState) => { return prevState + 1 })
+    }
+    else {
+      setRespIncorrectasCounter((prevState) => { return prevState + 1 })
+    };
+  }
+
+  //const counterIncorrectasHandler = () => { };
   const counterOmisionesHandler = () => { };
 
   const ImagePopulate = imagenesPlusIndex.map((ima) => {
@@ -18,7 +26,7 @@ const FilaDe4Imagenes = ({ imagenes: imagenesPlusIndex }) => {
       imagen={ima.img.imagen}
       respuestaCorrecta={ima.img.respuestaCorrecta}
       index={ima.counter}
-      onAddRespCorrecta={counterCorrectasHandler} />
+      onRespuesta={counterCorrectasHandler} />
   });
 
   return (

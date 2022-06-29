@@ -28,6 +28,9 @@ function PruebaCaritas() {
     <div className='pCaritas'>
       {filaTemp2.map((fila) => {
         counter2++;
+        //hasta ahora fila es un array de objetos {img,counter} sin clave
+        //al parecer este array lo puedo trabajar como un objeto al pasarlo por props a
+        //FilaDe4Imagenes para poder usar los valores ;)
         return <FilaDe4Imagenes key={`${fila[0].counter}`} imagenes={fila} numeroDeFila={counter2}/>
       })}
 
