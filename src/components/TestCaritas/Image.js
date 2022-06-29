@@ -1,7 +1,8 @@
 import React from 'react'
 import './Image.css'
 
-function Modulo({ imagen, respuestaCorrecta,onAddRespCorrecta }) {
+function Modulo({ imagen, respuestaCorrecta, index, onAddRespCorrecta }) {
+
   const evaluacionHandler = (event) => {
     event.preventDefault();
     console.log({

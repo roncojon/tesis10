@@ -8,11 +8,21 @@ export function PruebaCaritasProvider({ children }) {
         pruebaBase: {
             id: '',
             fecha: '',
-            filas: '',
-            intentos:'',
-            anotaciones:'',
-            errores:'',
-            omisiones:''        }
+            filas: [
+                {
+                    fila: {
+                        numeroDeFila: '',
+                        intentos: '',
+                        anotaciones: '',
+                        errores: '',
+                        omisiones: ''
+                    }
+                }],
+            intentosTotales: '',
+            anotacionesTotales: '',
+            erroresTotales: '',
+            omisionesTotales: '',
+        }
     }}>{children}</PruebaCaritasContext.Provider>);
 }
 
