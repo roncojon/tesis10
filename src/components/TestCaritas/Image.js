@@ -1,33 +1,44 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Image.css'
 
 
 function Modulo({ imagen, respuestaCorrecta, index, onRespuesta }) {
-  const [singleResponse, setSingleResponse] = useState(true); 
-const result = 0;
+  const [singleResponse, setSingleResponse] = useState(true);
+
+  
+  const arrayPosition = () => {
+    let resto = index % 4;
+    resto--;
+    if (resto === -1) {
+      resto = 3;
+    }
+    return resto
+  };
+
 
   const evaluacionHandler = (event) => {
     event.preventDefault();
     if (singleResponse) {
-    console.log({
-      img: event.target,
-      imgsrc: imagen,
-      target: event.target, id: event.target.id,
-      correct: respuestaCorrecta
-    });
+      /*    console.log({
+           img: event.target,
+           imgsrc: imagen,
+           target: event.target, id: event.target.id,
+           correct: respuestaCorrecta
+         }); */
       if (`${imagen}${respuestaCorrecta}` === event.target.id) {
         console.log("Respuesta CORRECTA");
-        onRespuesta(1);
+        onRespuesta([{ imagenIndex: index, anotacion: true, error: false },arrayPosition()]);
         setSingleResponse(false);
       }
       else {
         console.log("Respuesta Erronea");
-        onRespuesta(2);
+        onRespuesta([{ imagenIndex: index, anotacion: false, error: true },arrayPosition()]);
         setSingleResponse(false);
       }
     }
-    
-  }
+
+
+  };
 
   return (
 
