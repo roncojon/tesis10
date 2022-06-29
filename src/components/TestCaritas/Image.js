@@ -4,6 +4,7 @@ import './Image.css'
 
 function Modulo({ imagen, respuestaCorrecta, index, onRespuesta }) {
   const [singleResponse, setSingleResponse] = useState(true); 
+const result = 0;
 
   const evaluacionHandler = (event) => {
     event.preventDefault();
@@ -16,12 +17,12 @@ function Modulo({ imagen, respuestaCorrecta, index, onRespuesta }) {
     });
       if (`${imagen}${respuestaCorrecta}` === event.target.id) {
         console.log("Respuesta CORRECTA");
-        onRespuesta(true);
+        onRespuesta(1);
         setSingleResponse(false);
       }
       else {
         console.log("Respuesta Erronea");
-        onRespuesta(false);
+        onRespuesta(2);
         setSingleResponse(false);
       }
     }
