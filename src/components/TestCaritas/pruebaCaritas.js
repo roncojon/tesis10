@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import imgs from '../../imgs';
 import './PruebaCaritas.css'
 import FilaDe4Imagenes from './FilaDe4Imagenes'
+import {functionCaritas} from '../../functions/functionCaritas'
 
 function PruebaCaritas() {
   let filaTemp = [];
@@ -29,7 +30,10 @@ function PruebaCaritas() {
   const [resultadoDePrueba,setResultadoDePrueba] = useState([]);
 const resultadosHandler = (fila,index)=>{ const resultTemp = resultadoDePrueba; resultTemp[index] = fila;setResultadoDePrueba(resultTemp);};
 
-  console.log(resultadoDePrueba);
+  //console.log(resultadoDePrueba);
+  if (tiempoAgotado ===true) {
+    console.log(functionCaritas(resultadoDePrueba));
+  }
   return (
     <div className='pCaritas'>
       {filaTemp2.map((fila) => {
