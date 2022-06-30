@@ -3,27 +3,14 @@ import React, { createContext, useState } from 'react'
 const PruebaCaritasContext = createContext();
 
 export function PruebaCaritasProvider({ children }) {
+    const[tiempoDePrueba,setTiempoDePrueba] = useState(180);
+
+    
     return (<PruebaCaritasContext.Provider value={{
-        sujetoId: '',
-        pruebaBase: {
-            id: '',
-            fecha: '',
-            filas: [
-                {
-                    fila: {
-                        numeroDeFila: '',
-                        intentos: '',
-                        anotaciones: '',
-                        errores: '',
-                        omisiones: ''
-                    }
-                }],
-            intentosTotales: '',
-            anotacionesTotales: '',
-            erroresTotales: '',
-            omisionesTotales: '',
-        }
-    }}>{children}</PruebaCaritasContext.Provider>);
+
+    }}>
+        {children}
+    </PruebaCaritasContext.Provider>);
 }
 
 export default PruebaCaritasContext;
