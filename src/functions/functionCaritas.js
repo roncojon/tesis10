@@ -27,12 +27,13 @@ const functionCaritas = (filas) => {
                 erroresTotales++;
             }
         });
-        if (intentosTotales > fila[3].imagenIndex) {
+        if (intentosTotales >= fila[3].imagenIndex) {
             filaTemp.omitions = 4 - (filaTemp.anotations + filaTemp.errors);
         }
         else {
             fila.forEach(img => {
                 if (intentosTotales === img.imagenIndex) {
+                    console.log('When intentosTotales < fila[3]')
                     filaTemp.omitions = (intentosTotales % 4) - (filaTemp.anotations + filaTemp.errors);
                 }
             })
