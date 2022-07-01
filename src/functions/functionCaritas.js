@@ -8,16 +8,21 @@ const functionCaritas = (filas) => {
     let counter = 0;
     let temp ='';
 
+    filas.forEach(fila=>{
+        fila.forEach((imagen) => {
+            if (imagen.anotacion === true) {intentosTotales = imagen.imagenIndex;}
+            else if (imagen.error === true) {intentosTotales = imagen.imagenIndex;}
+        })
+    });
+
     filas.forEach((fila) => {
         const filaTemp = {anotations: 0, errors: 0, omitions: 0};
         fila.forEach((imagen) => {
             if (imagen.anotacion === true) {
-                intentosTotales = imagen.imagenIndex;
                 filaTemp.anotations++;
                 anotacionesTotales++;
             }
             else if (imagen.error === true) {
-                intentosTotales = imagen.imagenIndex;
                 filaTemp.errors++;
                 erroresTotales++;
             }
@@ -28,7 +33,7 @@ const functionCaritas = (filas) => {
         else {
             fila.forEach(img => {
                 if (intentosTotales === img.imagenIndex) {
-                    filaTemp.omitions = (img.imagenIndex % 4) - (filaTemp.anotations + filaTemp.errors);
+                    filaTemp.omitions = (intentosTotales % 4) - (filaTemp.anotations + filaTemp.errors);
                 }
             })
         }
@@ -36,6 +41,8 @@ const functionCaritas = (filas) => {
         temp = 'fila'+counter.toString();
         objetoPruebaCaritas[temp] = filaTemp;
     });
+   
+
     omisionesTotales = intentosTotales - (anotacionesTotales + erroresTotales)
 objetoPruebaCaritas = {intentosTotales,anotacionesTotales,erroresTotales,omisionesTotales,...objetoPruebaCaritas};
 return objetoPruebaCaritas;
