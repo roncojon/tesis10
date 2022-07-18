@@ -1,16 +1,18 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useCallback, useEffect } from 'react'
 import Image from './Image'
 import './FilaDe4Imagenes.css'
 import PruebaCaritasContext from '../../PruebaCaritasContext';
 
 
-const FilaDe4Imagenes = ({ imagenes: imagenesPlusIndex }) => {
+const FilaDe4Imagenes = ({ imagenes: imagenesPlusIndex ,numeroDeFila, timeAgotado,onTiempoAgotado}) => {
+  //console.log(numeroDeFila);
   const [respCorrectasCounter, setRespCorrectasCounter] = useState(0);
   const [respIncorrectasCounter, setRespIncorrectasCounter] = useState(0);
+  //const [tiempoAgotado,setTiempoAgotado] = useState(timeAgotado);
   /* const [omisionesCounter, setOMisionesCounter] = useState(0);
   const [imgCounter, setImgCounter] = useState(0); */
-
-
+//console.log(onTiempoAgotado);
+//console.log(timeAgotado);
   const resultadoTemp = [/* { imagenIndex: 0, anotacion: false, error: false } */];
 
   const numerosDeImagenes = [];
@@ -26,7 +28,7 @@ const FilaDe4Imagenes = ({ imagenes: imagenesPlusIndex }) => {
 
   const [resultado, setResultado] = useState(resultadoTemp);
 
-  const { prueba } = useContext(PruebaCaritasContext);
+  //const { prueba } = useContext(PruebaCaritasContext);
 
   const respuestaHandler = (respuesta) => {
     const response = respuesta[0];
@@ -48,6 +50,21 @@ const FilaDe4Imagenes = ({ imagenes: imagenesPlusIndex }) => {
       onRespuesta={respuestaHandler} />
   });
 
+  //console.log(tiempoAgotado)
+ // if (tiempoAgotado===true){console.log(resultado);onTiempoAgotado(resultado);setTiempoAgotado(false)}
+  useEffect(() => {
+    //console.log(resultado);
+    onTiempoAgotado(resultado,numeroDeFila-1)
+  }, [timeAgotado])
+  
+/* const gooo = useCallback(
+  () => {
+    console.log(resultado);
+    onTiempoAgotado(resultado);
+  },
+  [tiempoAgotado]
+)
+gooo(); */
   return (
     <div className='fila'>
       {ImagePopulate}
