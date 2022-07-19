@@ -1,7 +1,17 @@
-.modulo {border: 1px solid black;
-    width:200px; height:64px;
+.modulo {
+    border: 1px solid black;
+    width: 200px;
+    height: 64px;
+    position: relative;
 }
-.image {width:200px; height:64px;}
+.myCanvas {position: absolute;/*  left:0.4px *//*top:-1px */}
+.image {
+    width: 200px;
+    height: 64px;
+    position: absolute;
+    user-select:none
+}
+
 
 /* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
 

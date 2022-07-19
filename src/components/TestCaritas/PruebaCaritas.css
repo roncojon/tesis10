@@ -5,7 +5,7 @@
     width: 808px;
     border: 1px solid black;
     justify-content: center;
-    
+    user-select:none
 }
 
 /* Añadir queries para pantallas menores de 1008px y mayores de 1669px  */
