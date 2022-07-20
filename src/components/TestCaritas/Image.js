@@ -31,18 +31,49 @@ function Modulo({ imagen, respuestaCorrecta, index, onRespuesta }) {
         console.log("Respuesta CORRECTA");
         onRespuesta([{ imagenIndex: index, anotacion: true, error: false }, arrayPosition()]);
         setSingleResponse(false);
+
+        const c = coordsToCanvas(event.target.coords);
+        var canvas = document.getElementById(index);
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle =  "rgb(154, 215, 255)";     /* "rgb(68, 175, 218)" ; */
+        ctx.fillRect(c[0], c[1], 66, 64);
       }
       else {
         console.log("Respuesta Erronea");
         onRespuesta([{ imagenIndex: index, anotacion: false, error: true }, arrayPosition()]);
         setSingleResponse(false);
+
+        const c = coordsToCanvas(event.target.coords);
+        var canvas = document.getElementById(index);
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle =  "rgb(226, 196, 196)";     /* "rgb(68, 175, 218)" ; */
+        ctx.fillRect(c[0], c[1], 66, 64);
+        /* const c = coordsToCanvas(event.target.coords);
+        var canvas = document.getElementById(index);
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(50,16);
+        ctx.lineTo(40,19.2);
+        ctx.lineTo(100,32);
+        ctx.lineTo(90,38.4);
+        ctx.closePath();
+        ctx.fill(); */
+
+        //ctx.fillStyle = "rgb(226, 57, 99)" /* "rgb(177, 181, 182)"  */ 
+        //ctx.fillRect(c[0], c[1], 66, 64);
+
+        
       }
 
-      const c = coordsToCanvas(event.target.coords);
+     /*  const c = coordsToCanvas(event.target.coords);
       var canvas = document.getElementById(index);
       var ctx = canvas.getContext("2d");
-      ctx.fillStyle = "rgb(190, 76, 76)";
-      ctx.fillRect(c[0], c[1], 66, 64);
+      ctx.fillStyle =  "rgb(177, 181, 182)"  
+      ctx.fillRect(c[0], c[1], 66, 64); */
+
+/* "rgb(201, 123, 142)" */ /* "rgb(190, 76, 76)" */;
+
      /*  ctx.lineWidth = 2;
     ctx.strokeRect(c[0], c[1], 66, 64); */
     }
@@ -52,7 +83,7 @@ function Modulo({ imagen, respuestaCorrecta, index, onRespuesta }) {
       const c = coordsToCanvas(event.target.coords);
       var canvas = document.getElementById(index);
       var ctx = canvas.getContext("2d");
-      ctx.fillStyle = "rgb(226, 196, 196)";
+      ctx.fillStyle = "rgb(218, 215, 216)";
       ctx.fillRect(c[0], c[1], 66, 64);
     }
   }

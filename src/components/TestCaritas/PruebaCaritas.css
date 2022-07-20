@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     /* background-color: yellow; */
     width: 808px;
-    border: 1px solid black;
+    border: 1px solid   rgb(201, 123, 142);
     justify-content: center;
     user-select:none
 }
