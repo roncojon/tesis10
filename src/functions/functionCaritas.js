@@ -45,7 +45,7 @@ const functionCaritas = (filas) => {
    
 
     omisionesTotales = intentosTotales - (anotacionesTotales + erroresTotales)
-objetoPruebaCaritas = {intentosTotales,anotacionesTotales,erroresTotales,omisionesTotales,...objetoPruebaCaritas};
+objetoPruebaCaritas = {intentosTotales,anotacionesTotales,erroresTotales,omisionesTotales,fila:{...objetoPruebaCaritas}};
 return objetoPruebaCaritas;
 }
 

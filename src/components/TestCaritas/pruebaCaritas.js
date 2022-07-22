@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import imgs from '../../imgs';
 import './PruebaCaritas.css'
 import FilaDe4Imagenes from './FilaDe4Imagenes'
@@ -34,6 +34,15 @@ const resultadosHandler = (fila,index)=>{ const resultTemp = resultadoDePrueba; 
   if (tiempoAgotado ===true) {
     console.log(functionCaritas(resultadoDePrueba));
   }
+  useEffect(()=>{
+    console.log('useEffect');
+    const fetcha = ()=>
+    fetch('https://localhost:44381/api/pruebadecaritas'
+).then(response =>{return response.json()})
+.then(resp => console.log(resp))
+
+fetcha();
+  },[tiempoAgotado])
   return (
     <div className='pCaritas'>
       {filaTemp2.map((fila) => {

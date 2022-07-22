@@ -103,7 +103,7 @@ function Modulo({ imagen, respuestaCorrecta, index, onRespuesta }) {
         Your browser does not support the canvas element.
       </canvas>
 
-      <img ks className="image" src={imagen} alt="Workplace" useMap={`#${imagen}`} />
+      <img className="image" src={imagen} alt="Workplace" useMap={`#${imagen}`} />
       <map name={imagen}>
         <area className='ar' id={imagen + '1'} shape="rect" coords="0,0,66,64" alt="Computer" onClick={evaluacionHandler} onMouseOver={hoverHandlerIn} onMouseOut={hoverHandlerOut} />
         <area className='ar' id={imagen + '2'} shape="rect" coords="68,0,132,64" alt="Phone" onClick={evaluacionHandler} onMouseOver={hoverHandlerIn} onMouseOut={hoverHandlerOut}/> 
